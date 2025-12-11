@@ -1,0 +1,50 @@
+// Site header start 
+.site-header {
+    width: 100%;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    padding: 20px 0;
+    background-color: #0000004D;
+    backdrop-filter: blur(10px);
+}
+.header{
+    @include display($items:center, $justify:space-between, $gap:0px);
+}
+.header__logo-link {
+    display: inline-block;
+}
+.header__navbar {
+    @include display($items:center, $justify:none, $gap:50px);
+}
+.navbar__list {
+    @include display($items:center, $justify:none, $gap:25px);
+}
+.navbar__link {
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    text-transform: uppercase;
+    transition: 0.3s all linear;
+    
+    &:hover{
+        color: #FF7D44;
+    }   
+}
+.navbar__tel-wrapper {
+    @include display($items:center, $justify:none, $gap:10px);
+    
+}
+.navbar__tel-wrapper > a{
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    text-transform: uppercase;
+    transition: 0.3s all linear;
+    
+    &:hover{
+        color: #FF7D44;
+    }   
+}

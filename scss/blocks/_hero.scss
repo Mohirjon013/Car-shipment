@@ -1,0 +1,149 @@
+// Hero section start 
+.site-hero {
+    height: 100vh;
+    padding: 180px 0 93px 0;
+    background-image: url(../../images/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom center;
+    background-attachment: fixed;
+}
+.hero {
+    @include display($items:start, $justify:space-between, $gap:0px);
+}
+.hero__form {
+    width: 449px;
+    padding: 25px;
+    background-color: #3A3A3A80;
+    border-radius: 10px;
+    backdrop-filter: blur(30);
+}
+.hero__form > h2{
+    @include textStyle($CLR:white, $FS:30px, $FW:700, $LH:100%, $MB:8px );
+}
+.hero__form > p{
+    @include textStyle($CLR:#FFFFFFCC, $FS:16px, $FW:400, $LH:100%, $MB:0px );
+}
+.hero__form--line1{
+    width: 100%;
+    height: 1px;
+    display: block;
+    margin: 20px 0 25px;
+    background-color: #E0E0E0;
+}
+.hero__form > label{
+    display: flex;
+    margin-top: 15px;
+    flex-direction: column;
+    gap: 8px;
+    @include textStyle($CLR:white, $FS:15px, $FW:400, $LH:100%, $MB:0px );
+}
+.hero__form-margin{
+    margin-top: 0;
+}
+.hero__form > label > input{
+    width: 100%;
+    padding: 16px 5px 16px 40px;
+    background-color: white;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    &::placeholder{
+        color: black;
+    }
+}
+.hero__form-input1{
+    background-image: url(../../images/location.svg);
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: 10px center;
+}
+.hero__form-input2{
+    background-image: url(../../images/calendar.svg);
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: 10px center;
+}
+.hero__content-wrapper {
+    width: 505px;
+    padding-top: 43px;
+}
+.hero__text {
+    position: relative;
+    padding-left: 34px;
+    text-transform: uppercase;
+    @include textStyle($CLR:white, $FS:14px, $FW:500, $LH:100%, $MB:11px );
+
+    &::before{
+        content: "";
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        background-image: url(../../images/star-icon.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto 0;
+    }
+}
+.her__title {
+    @include textStyle($CLR:white, $FS:56px, $FW:700, $LH:100%, $MB:20px );
+
+}
+.hero__subtext {
+    @include textStyle($CLR:white, $FS:20px, $FW:400, $LH:100%, $MB:0px );
+
+}
+
+.form__radio-wrapper {
+    margin-top: 8px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #E0E0E0;
+    @include display($items:start, $justify:none, $gap:15px);
+}
+.form__strong{
+    margin-top: 15px;
+    display: block;
+    @include textStyle($CLR:white, $FS:15px, $FW:400, $LH:100%, $MB:8px );
+}
+.form__radio-lebal {
+    width: 49%;
+    padding: 15px;
+    border-radius: 12px;
+    background-color: white;
+    @include display($items:center, $justify:none, $gap:12px);
+}
+.form__radio {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1px solid #D3D3D3;
+    cursor: pointer;
+}
+.input-radio:checked ~ .form__radio{
+    background-color: #FF7D44;
+}
+.form__radio-text {
+    @include textStyle($CLR:#000000DE, $FS:17px, $FW:400, $LH:100%, $MB:0px );
+}
+.hero__form-btn{
+    width: 100%;
+    margin-top: 20px;
+    padding: 17px 0;
+    border-radius: 8px;
+    border: none;
+    background-color: #FF7D44;
+    border: 1px solid transparent;
+    transition: 0.3s all linear;
+    cursor: pointer;
+    @include textStyle($CLR:white, $FS:17px, $FW:500, $LH:100%, $MB:0px );
+
+    &:hover{
+        background-color: transparent;
+        color: #FF7D44;
+        border-color: #FF7D44;
+    }
+
+}
