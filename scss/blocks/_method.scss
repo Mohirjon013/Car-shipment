@@ -1,0 +1,66 @@
+// method section start 
+.method-section {
+    padding: 75px 0 194px;
+    position: relative;
+    &::after{
+        content: "";
+        width: 450px;
+        height: 516px;
+        position: absolute;
+        bottom: 0;
+        background-image: url(../../images/methed-bg2.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    &::before{
+        content: "";
+        width: 450px;
+        height: 112px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-image: url(../../images/method-bg1.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
+.methoed__title-wrapper {
+    width: 798px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 80px;
+}
+.methoed__title-wrapper > h2{
+    @include textStyle($CLR:#000000DE, $FS:38px, $FW:700, $LH:100%, $MB:15px );
+}
+.methoed__title-wrapper > h2 > span{
+    @include textStyle($CLR:#FF7D44, $FS:38px, $FW:700, $LH:100%, $MB:0px );
+}
+.methoed__title-wrapper > p{
+    @include textStyle($CLR:#000000AD, $FS:16px, $FW:400, $LH:24px, $MB:0px );
+}
+.method__item + .method__item{
+    margin-top: 50px;
+}
+.method__item {
+    @include display($items:center, $justify:start, $gap:24px);
+}
+.method__item:nth-child(2){
+    display: flex;
+    flex-direction: row-reverse;
+}
+.method__item-wrapper > h3{
+    @include textStyle($CLR:#000000DE, $FS:24px, $FW:700, $LH:100%, $MB:15px );
+}
+.method__item-wrapper > p{
+    @include textStyle($CLR:#000000AD, $FS:16px, $FW:400, $LH:24px, $MB:30px );
+}
+.method__item-wrapper > button{
+    transition: 0.3s all linear;
+    @include btnStyle($WH:259px, $PAD:15px, $borderCLR:#FF7D44, $BG:transparent, $btnCLR:#000000DE, $btnFS:16px, $btnFW:500, $btnLH:100%);
+    &:hover{
+        background-color: #FF7D44;
+        color: #000000DE;
+        border-color: #FF7D44;
+    }
+}

@@ -1,6 +1,5 @@
 // Hero section start 
 .site-hero {
-    height: 100vh;
     padding: 180px 0 93px 0;
     background-image: url(../../images/hero-bg.jpg);
     background-repeat: no-repeat;
@@ -118,32 +117,32 @@
 .form__radio {
     width: 26px;
     height: 26px;
+    position: relative;
     border-radius: 50%;
     border: 1px solid #D3D3D3;
     cursor: pointer;
 }
-.input-radio:checked ~ .form__radio{
+.form__radio--inner{
+    position: absolute;
+    inset: 3px;
+    border-radius: 50%;
+}
+.input-radio:checked ~ .form__radio > .form__radio--inner{
     background-color: #FF7D44;
+}
+.input-radio:checked ~ .form__radio{
+    border-color: #FF7D44;
 }
 .form__radio-text {
     @include textStyle($CLR:#000000DE, $FS:17px, $FW:400, $LH:100%, $MB:0px );
 }
 .hero__form-btn{
-    width: 100%;
     margin-top: 20px;
-    padding: 17px 0;
-    border-radius: 8px;
-    border: none;
-    background-color: #FF7D44;
-    border: 1px solid transparent;
     transition: 0.3s all linear;
-    cursor: pointer;
-    @include textStyle($CLR:white, $FS:17px, $FW:500, $LH:100%, $MB:0px );
-
+    @include btnStyle($WH:100%, $PAD:17px, $borderCLR:transparent, $BG:#FF7D44, $btnCLR:white, $btnFS:17px, $btnFW:500, $btnLH:100%);
     &:hover{
         background-color: transparent;
         color: #FF7D44;
         border-color: #FF7D44;
     }
-
 }

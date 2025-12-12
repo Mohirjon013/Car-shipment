@@ -1,0 +1,112 @@
+// contact section start 
+.contact-section {
+    padding: 80px 0;
+    background-image: url(../../images/contact-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;   
+    background-attachment: fixed;
+}
+.contact {
+    @include display($items:start, $justify:space-between, $gap:0px);
+}
+.contact__content-wrapper {
+    width: 449px;
+    margin-top: 77px;
+}
+.contact__content-wrapper > h2{
+    @include textStyle($CLR:white, $FS:38px, $FW:700, $LH:100%, $MB:16px );
+}
+.contact__content-wrapper > p{
+    @include textStyle($CLR:white, $FS:16px, $FW:400, $LH:24px, $MB:0px );
+}
+.contact__list {
+    margin-top: 38px;
+}
+.contact__item {
+    width: 250px;
+    @include display($items:start, $justify:start, $gap:23px);
+}
+.tel__box > span {
+    display: block;
+    @include textStyle($CLR:white, $FS:15px, $FW:400, $LH:100%, $MB:8px );
+}
+.tel__box > strong {
+    display: block;
+    @include textStyle($CLR:white, $FS:18px, $FW:700, $LH:100%, $MB:0px );
+}
+.contact__item-line {
+    width: 260px;
+    height: 1px;
+    margin: 20px 0;
+    background-color: #989898;
+}
+.contact__form {
+    width: 543px;
+    padding: 25px 30px;
+    background-color: #5A5A5A80;
+    border-radius: 10px;
+    backdrop-filter: calc(30px);
+}
+.contact__form > h2{
+    @include textStyle($CLR:white, $FS:30px, $FW:700, $LH:100%, $MB:25px );
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E0E0E0;
+}
+.contact__form > label{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.contact__form > label > span , .contact__input-wrapper > label > span{
+    @include textStyle($CLR:white, $FS:15px, $FW:400, $LH:100%, $MB:0px );
+}
+.contact__form > label > input , .contact__input-wrapper > label > input{
+    width: 100%;
+    padding: 14px 6px 14px 15px;
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    
+    @include textStyle($CLR:black, $FS:15px, $FW:400, $LH:100%, $MB:0px );
+    &::placeholder{
+        color: #00000061;
+    }
+}
+.contact__input-wrapper {
+    margin: 15px 0;
+    @include display($items:start, $justify:start, $gap:10px);
+}
+.contact__input-wrapper > label > input{
+    width: 236px;
+    margin-top: 8px;
+}
+.contact__form-line {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #E0E0E0;
+
+}
+.contact__form-line > textarea{
+    padding: 15px 6px 60px 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    resize: none;
+
+    @include textStyle($CLR:black, $FS:15px, $FW:400, $LH:100%, $MB:0px );
+    &::placeholder{
+        color: #00000061;
+    }
+}
+.contact__form > button{
+    display: block  ;
+    margin-top: 20px;
+    transition: 0.3s all linear;
+    @include btnStyle($WH:100%, $PAD:17.5px, $borderCLR:transparent, $BG:#FF7D44, $btnCLR:white, $btnFS:17px, $btnFW:500, $btnLH:100%);
+    &:hover{
+        background-color: transparent;
+        color: #FF7D44;
+        border-color: #FF7D44;
+    }
+}

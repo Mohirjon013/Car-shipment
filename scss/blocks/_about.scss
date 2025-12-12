@@ -1,0 +1,30 @@
+// about section start 
+.about-section {
+    padding: 100px;
+}
+.about {
+    @include display($items:start, $justify:start, $gap:24px);
+}
+.about__content-wrapper:last-child{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.about__content-wrapper:first-child > img{
+    margin-top: 50px;
+}
+.about__content-wrapper:last-child > img{
+    margin-bottom: 50px;
+}
+.about__content-wrapper:last-child > h2 , .about__content-wrapper:last-child > p{
+    margin-left: 26px;
+}
+.about__content-wrapper > h2 {
+    @include textStyle($CLR:#000000DE, $FS:38px, $FW:700, $LH:100%, $MB:16px );
+}
+.about__content-wrapper > h2 > span {
+    @include textStyle($CLR:#FF7D44, $FS:38px, $FW:700, $LH:100%, $MB:0px );
+}
+.about__content-wrapper > p {
+    @include textStyle($CLR:#000000AD, $FS:16px, $FW:400, $LH:24px, $MB:16px );
+}

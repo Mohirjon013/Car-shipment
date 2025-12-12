@@ -1,0 +1,45 @@
+// pro section start 
+.pro-section {
+    padding: 75px 0;
+    background-image: url(../images/por-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+}
+.pro {
+    @include display($items:center, $justify:space-between, $gap:0px);
+}
+.pro__content-wrapper {
+    width: 300px;
+}.pro__content-wrapper > h2{
+    @include textStyle($CLR:white, $FS:38px, $FW:700, $LH:40px, $MB:20px );
+}
+.pro__content-wrapper > p{
+    @include textStyle($CLR:white, $FS:16px, $FW:400, $LH:100%, $MB:0px );
+}
+.pro__list {
+    @include display($items:start, $justify:start, $gap:50px);
+}
+.pro__item{
+    width: 107px;
+}
+.count__img-wrapper {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 15px;
+}
+.count__img-wrapper > img{
+    margin: 0 auto;
+}
+.pro__item > strong {
+    display: inline-block;
+    @include textStyle($CLR:white, $FS:50px, $FW:700, $LH:100%, $MB:8px );
+}
+.pro__item > p {
+    @include textStyle($CLR:white, $FS:16px, $FW:500, $LH:100%, $MB:0px );
+}
+

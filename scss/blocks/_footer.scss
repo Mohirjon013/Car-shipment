@@ -1,0 +1,35 @@
+// footer start 
+.site-footer {
+    padding: 50px 0;
+    background-color: #282828;
+}
+.footer {
+    @include display($items:start, $justify:space-between, $gap:0px);
+}
+.footer__logo-wrapper {
+}
+.footer__logo-link{
+    display: inline-block;
+}
+.footer__text {
+    margin-top: 16px;
+    @include textStyle($CLR:#FFFFFFAD, $FS:16px, $FW:400, $LH:100%, $MB:54px );
+}
+.footer__subtext {
+    @include textStyle($CLR:#FFFFFF61, $FS:14px, $FW:400, $LH:100%, $MB:0px );
+}
+.footer__list {
+    width: 635px;
+    @include display($items:start, $justify:space-between, $gap:0px);
+}
+.footer__item > strong {
+    display: inline-block;
+    @include textStyle($CLR:#FFFFFFDE, $FS:18px, $FW:700, $LH:100%, $MB:20px );
+}
+.footer__link{
+    display: block  ;
+    @include textStyle($CLR:#FFFFFFAD, $FS:15px, $FW:400, $LH:100%, $MB:0px );
+}
+.footer__link + .footer__link{
+    margin-top: 12px;
+}

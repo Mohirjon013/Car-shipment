@@ -12,3 +12,15 @@
     line-height: $LH;
     margin-bottom: $MB;
 }
+
+@mixin btnStyle($WH, $PAD, $borderCLR, $BG, $btnCLR, $btnFS, $btnFW, $btnLH){
+    text-align: center;
+    width: $WH;
+    padding: $PAD 0;
+    border: none;
+    border: 1px solid $borderCLR;
+    border-radius: 8px;
+    background-color: $BG;
+    cursor: pointer;
+    @include textStyle($CLR:$btnCLR, $FS:$btnFS, $FW:$btnFW, $LH:$btnLH, $MB:0px )
+}

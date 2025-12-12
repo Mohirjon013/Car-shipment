@@ -33,8 +33,7 @@
     }   
 }
 .navbar__tel-wrapper {
-    @include display($items:center, $justify:none, $gap:10px);
-    
+    @include display($items:center, $justify:none, $gap:10px); 
 }
 .navbar__tel-wrapper > a{
     color: white;
