@@ -1077,11 +1077,15 @@
 
 .footer__link {
   display: block;
+  transition: 0.3s all linear;
   color: rgba(255, 255, 255, 0.6784313725);
   font-size: 15px;
   font-weight: 400;
   line-height: 100%;
   margin-bottom: 0px;
+}
+.footer__link:hover {
+  color: #f48555;
 }
 
 .footer__link + .footer__link {

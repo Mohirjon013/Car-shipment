@@ -6,8 +6,6 @@
 .footer {
     @include display($items:start, $justify:space-between, $gap:0px);
 }
-.footer__logo-wrapper {
-}
 .footer__logo-link{
     display: inline-block;
 }
@@ -28,7 +26,12 @@
 }
 .footer__link{
     display: block  ;
+    transition: 0.3s all linear;
     @include textStyle($CLR:#FFFFFFAD, $FS:15px, $FW:400, $LH:100%, $MB:0px );
+
+    &:hover{
+        color: #f48555;
+    }
 }
 .footer__link + .footer__link{
     margin-top: 12px;
